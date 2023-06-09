@@ -38,7 +38,7 @@ if (isset($_POST['formconnexion'])) {
                 // Redirection vers la page de profil.
                 // Si la connexion est réussie, l'utilisateur est redirigé vers la page profil.php en passant l'identifiant de session dans l'URL (profil.php?id=...).
                 // La fonction header("Location: ...") est utilisée pour effectuer la redirection.
-                header("Location: profil.php?id=" . $_SESSION['id']);
+                header("Location: index.php?id=" . $_SESSION['id']);
                 exit();
             } else {
                 // Affichage des erreurs.
@@ -104,6 +104,8 @@ if (isset($_POST['formconnexion'])) {
             <br>
         </form>
         <a href="inscription.php">Se créer un compte</a>
+        <br>
+        <a href="index.php">Retourner à l'accueil</a>
 
         <?php
         if (isset($erreur)) {
